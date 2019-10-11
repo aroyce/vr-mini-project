@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic Scene - A-Frame</title>
+    <meta name="description" content="Basic Scene - A-Frame">
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    
+    <!--environment code from https://github.com/supermedium/aframe-environment-component -->
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  
+    <!--DonMcCurdy files to the rescue -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+    
+  <!--from Michael's demo turnip file-->
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script> 
+    <script src="https://rawgit.com/Utopiah/googlepoly-load-component/master/googlepoly-load-component.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
+    <style>
+      a-scene {width: 100%; height: 100%;}
+    </style>
+</head>
+
+    <!-- External libraries -->
+    
+<body>
+
+<a-scene>
+  <!-- Out of the box environment! -->
+  <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
+
+  <a-assets>
+        <!-- Images, models, and sound effects from ARI mtg-->
+      <img id="stoneTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+      <!--from Michael's turnip demo-->
+      <a-asset-item id="whiteboard-gltf" src="https://michaelnebeling.github.io/whiteboard/scene.gltf"></a-asset-item>
+
+   </a-assets>
+      <!--https://github.com/donmccurdy/aframe-physics-system-->
+      <!--from Michael demo-->
+  <a-camera position="0 1.6 5" wasd-controls="fly: true">
+    <a-cursor color="white"></a-cursor>
+  </a-camera> 
+  
+  <!--from A-Frame: https://aframe.io/docs/0.9.0/guides/building-a-basic-scene.html#tweaking-lighting -->
+    <a-light type="ambient" color="#eba160"></a-light>
+  <a-light type="point" intensity=".15" position="2 4 4"></a-light>
+
+
+      <!-- Entities (objects in scene) from ARI mtg-->
+<!--  
+      <a-box position="1 1 -2" src="#stoneTexture"></a-box>
+      <a-box width="3" color="red"></a-box>
+      <a-sphere position="0 2 2" material="color: yellow"></a-sphere>
+      <a-sphere  position="2 4 -2" material="color: green"></a-sphere>
+    
+      <a-entity geometry="primitive: box; width: 3" material="color: red"></a-entity>
+
+      <a-entity position="3 3 2" text="value: Hello, World" text-color="black"></a-entity>
+
+-->
+<!--I think I started with code from the A-Frame instruction pages-->
+  <a-entity position="2 1.5 1" geometry="primitive: plane; width: 1; height: .25" material="color: #8a4911" ></a-entity>
+  <a-text value="Tomato" position="1.55 1.5 1"></a-text>
+  <a-cylinder position="2 1 .95" radius="0.015" height=".75" color="#FFC65D" shadow></a-cylinder>
+ 
+  <a-entity position="-1.05 1.5 1" geometry="primitive: plane; width: 1; height: .25" material="color: #8a4911" ></a-entity>
+  <a-text value="Lettuce" position="-1.4 1.5 1"></a-text>
+  <a-cylinder position="-1.05 1 .95" radius="0.015" height=".75" color="#FFC65D" shadow></a-cylinder>
+ 
+  
+<!-- https://aframe.io/docs/master/introduction/#getting-started -->
+  <a-sky color="#ECECEC"></a-sky>
+
+
+<!-- started with code from https://codepen.io/mnebeling/pen/PXmNXZ-->
+    <a-box position="-2 0.5 0" rotation="0 90 0" width="4" depth="3" height=".75" depth="1" color="#342508" shadow></a-box>
+    <a-box position="3 0.5 0" rotation="0 90 0" width="4" depth="3" height=".75" depth="1" color="#342508" shadow></a-box>
+
+
+
+  <!-- See https://github.com/feiss/aframe-environment-component for details -->
+
+  <!-- See https://feiss.github.io/aframe-environment-component/ for all presets -->
+      
+<!--from Michael's turnip demo-->      
+<!-- Stolen from Sketchfab :-) -->
+  <!-- <a-entity gltf-model="#whiteboard-gltf" position="0 0 -10" rotation="0 -90 0" scale="0.005 0.005 0.005"></a-entity> -->
+ 
+<!--my garden stakes--> 
+  <a-cylinder position="2 1.75 -1" radius="0.05" height="3.5" color="#FFC65D" shadow></a-cylinder>
+  <a-cylinder position="4 1.75 -1" radius="0.05" height="3.5" color="#FFC65D" shadow></a-cylinder>
+  <a-cylinder position="3 1.75 0" radius="0.05" height="3.5" color="#FFC65D" shadow></a-cylinder>
+  
+<!-- Tomatoes by Olga Nabtova: https://poly.google.com/view/dmzbb8UisNv-->
+  <a-entity position="2.5 2.5 -.5" scale=".01 .01 .01" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="-90 0 0" gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>   
+  <a-entity position="2.75 3 -.75" scale=".01 .01 .01" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="-90 0 0" gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>   
+  <a-entity position="3.15 2 -.25" scale=".01 .01 .01" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="-90 0 0" gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  <a-entity position="2.25 1.75 -1" scale=".01 .01 .01" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="-90 0 0" gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  <a-entity position="3.75 3 -1" scale=".01 .01 .01" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="-90 0 0" gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+      
+<!-- Fiddlehead: https://poly.google.com/view/1RBdp6-9pZi-->
+  <a-entity position="2.5 1.75 -1" scale="1 2 1" rotation="0 45 0" gpoly="polyid: 1RBdp6-9pZi; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  <a-entity position="3.5 1.75 -1" scale="1 2 1" rotation="0 -45 0" gpoly="polyid: 1RBdp6-9pZi; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  
+  
+<!-- Scarecrow by Jon Corralejo: https://poly.google.com/view/7qFs_DjjuVp -->
+  <!--  <a-entity position="-5 2 -10" scale="3 3 3" rotation="0 0 0" gpoly="polyid: 7qFs_DjjuVp; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity> -->
+           
+<!-- Shovel by Techno Latinex: https://poly.google.com/view/a9-g0Ylwft7 -->
+  <a-entity position="-.25 -3 2" scale="1 1 1" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="0 90 0" gpoly="polyid: a9-g0Ylwft7; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+
+<!-- Apple tree by Jon Benton: https://poly.google.com/view/cpg6wP8JCyQ-->
+  <a-entity position="-18 0 -20" scale="1 1 1" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="0 0 0" gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  <a-entity position="-18 0 -10" scale="1 1 1" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="0 0 0" gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  <a-entity position="18 0 -15" scale="1 1 1" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="0 0 0" gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  <a-entity position="18 0 -5" scale="1 1 1" event-set__mousedown="scale: 5 5 5" event-set__mouseup="scale: 3 3 3" rotation="0 0 0" gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+
+<!--kelp by Heather Askew: https://poly.google.com/view/4cFllH6Iazk  -->
+  <a-entity position="-1.25 1.25 -1" scale="1 1 1"  rotation="0 0 0" gpoly="polyid: 4cFllH6Iazk; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  <a-entity position="-2.5 1.25 -1" scale="1 1 1"  rotation="0 0 0" gpoly="polyid: 4cFllH6Iazk; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  <a-entity position="-1.25 1.25 0" scale="1 1 1"  rotation="0 0 0" gpoly="polyid: 4cFllH6Iazk; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+  <a-entity position="-2.5 1.25 0" scale="1 1 1"  rotation="0 0 0" gpoly="polyid: 4cFllH6Iazk; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"></a-entity>
+    
+    
+</a-scene>
+</body>
+</html>
