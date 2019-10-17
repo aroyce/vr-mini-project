@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kara's A-Frame Scene</title>
+    <meta name="description" content="VR GARDEN - A-Frame" />
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src=" https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/Utopiah/googlepoly-load-component/master/googlepoly-load-component.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
+
+    <style>
+      a-scene {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene background="color: white">
+      <a-assets>
+        <a-asset-item
+          id="pot-gltf"
+          src="https://kdails.github.io/model_gltf_bVepm2yfJTh_6fc4dNAJzB3 2/model.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="shed-gltf"
+          src="https://kdails.github.io/model_gltf_1XVubjE0oJ9_c_K5OO9TGBV/model.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="cabbage-gltf"
+          src="https://kdails.github.io/archive (1)/Cabbage_01.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="pitchfork"
+          src="https://kdails.github.io/archive (2)/pitchfork.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="table-gltf"
+          src="https://kdails.github.io/archive (5)/Table_Large_Rectangular_01.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="sun-gltf"
+          src="https://kdails.github.io/sun/Sun_01.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="jug-gltf"
+          src="https://kdails.github.io/jug/Jug_505.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="fig-gltf"
+          src="https://kdails.github.io/figgie/FiddleleafFigPottedPlant.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="cattle-gltf"
+          src="https://kdails.github.io/cow/Mesh_Cattle.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="patch-gltf"
+          src="https://kdails.github.io/patch/model.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="chick-gltf"
+          src="https://kdails.github.io/chick/model.gltf"
+        ></a-asset-item>
+      </a-assets>
+
+      <a-entity environment="preset: forest"></a-entity>
+      <!-- Stolen from Google Poly - by google :-) -->
+      <a-entity
+        gltf-model="#pot-gltf"
+        position="3 1 -2"
+        scale="1.5 1.5 1.5"
+        rotation="0 -90 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#table-gltf"
+        position="0 0 -2"
+        scale=".05 .05 .1"
+        rotation="0 -90 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#jug-gltf"
+        position="0 .4 -2"
+        scale=".01 .01 .01"
+        event-set__mousedown="rotation: -50 -40 0"
+        event-set__mouseup="scale: .015 .015 .015"
+        rotation="0 40 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#pot-gltf"
+        position="2.5 1.4 -1"
+        rotation="0 -90 0"
+        scale="2 2 2"
+      ></a-entity>
+      <a-entity
+        gltf-model="#fig-gltf"
+        position=".4 .4 -2"
+        rotation="0 -90 0"
+        scale=".1 .1 .1"
+      ></a-entity>
+      <a-entity
+        gltf-model="#cabbage-gltf"
+        position=".2 0 -4"
+        rotation="0 -90 0"
+        scale=".03 .03 .03"
+      ></a-entity>
+      <a-entity
+        gltf-model="#cabbage-gltf"
+        position="-1 0 -3.5"
+        rotation="0 -90 0"
+        scale=".03 .03 .03"
+      ></a-entity>
+      <a-entity
+        gltf-model="#shed-gltf"
+        position="0 -1.3 -3"
+        rotation="0 -110 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#patch-gltf"
+        position="1 2 1"
+        rotation="0 -110 0"
+        scale="2 2 2"
+      ></a-entity>
+      <a-entity
+        gltf-model="#patch-gltf"
+        position="4 2 2"
+        rotation="0 -80 0"
+        scale="2 2 2"
+      ></a-entity>
+      <a-entity
+        gltf-model="#cattle-gltf"
+        position="-5 1 5"
+        rotation="0 -10 0"
+        scale=".01 .01 .01"
+      ></a-entity>
+      <a-entity
+        gltf-model="#cattle-gltf"
+        position="-1 1 5"
+        rotation="0 -110 0"
+        scale=".01 .01 .01"
+      ></a-entity>
+      <a-entity
+        gltf-model="#chick-gltf"
+        position="0.2 -.9 -1.75"
+        scale="1.9 1.9 1.9"
+        rotation="0 20 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#sun-gltf"
+        position="-2 8 -13"
+        scale=".01 .01 .01"
+        rotation="0 99 0"
+      ></a-entity>
+      <a-entity
+        gltf-model="#pitchfork"
+        position="-1 0 -1.4"
+        scale=".15 .15 .15"
+        event-set__mousedown="rotation: 50 60 90"
+        event-set__mouseup="scale: .25 .25 .25"
+        rotation="0 90 0"
+      ></a-entity>
+      
+
+      <a-camera position="0 1.6 0">
+        <a-cursor color="blue"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
