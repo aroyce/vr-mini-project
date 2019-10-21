@@ -1,4 +1,4 @@
-Welcome to VR GARGEN ! 
+Welcome to VR GARDEN ! 
 
 Please visit : https://aroyce.github.io/vr-mini-project/index.html to interact with our prototype. 
 
