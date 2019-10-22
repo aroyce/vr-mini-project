@@ -67,9 +67,9 @@
                    castShadow: true;
                    intensity: 0.4;
                    shadowCameraVisible: true;
-                    shadowCameraTop: 3.0
-                    shadowCameraRight: 2.0
-                     shadowCameraLeft: 2.0"
+                    shadowCameraTop: 3.5
+                    shadowCameraRight: 3.5
+                     shadowCameraLeft: 3.5"
             position="-5 3 1.5"></a-light>
       <!--Light for shadows-->
 
@@ -115,13 +115,13 @@
           <a-entity id="directionaltarget" position="0 0 -1"></a-entity>
       </a-light>
       <!-- Plant Seeds Asset -->
-      <!-- <a-box 
-        color="white" 
-        height="1" 
-        width=".6" 
+      <!-- <a-box
+        color="white"
+        height="1"
+        width=".6"
         depth=".05"
-        position="0 0.5 1.5" 
-        id="seeds" 
+        position="0 0.5 1.5"
+        id="seeds"
         src="#seeds_img">
         <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
         <a-event name="mouseenter" scale="2.3 2.3 2.3"></a-event>
@@ -250,7 +250,7 @@
         sound="src: #pitchfork_sound; on: click; autoplay: false; volume: 1"
         rotation="0 170 0"
       ></a-entity>
-      
+
       <a-entity
         gltf-model="#jug-gltf"
         position="0.7 0 0.8"
@@ -268,20 +268,20 @@
         event-set__mousedown="scale: 5 5 5"
         event-set__mouseup="scale: 3 3 3"
         rotation="0 0 0"
-        shadow="cast: true"        
-        gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"    
+        shadow="cast: true"
+        gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
       ></a-entity>
-      <a-circle id="ground" position="-18 0 -20" radius="5" rotation="-90 0 0" shadow="receive: true" color =  "#4d4d00"></a-circle>
+      <a-circle id="ground" position="-18 0 -20" radius="8" rotation="-90 0 0" shadow="receive: true" color =  "#4d4d00"></a-circle>
       <a-entity
         position="-18 0 -10"
         scale="1 1 1"
         event-set__mousedown="scale: 5 5 5"
         event-set__mouseup="scale: 3 3 3"
         rotation="0 0 0"
-        shadow="cast: true" 
+        shadow="cast: true"
         gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
       ></a-entity>
-      <a-circle id="ground2" position="-18 0 -10" radius="5" rotation="-90 0 0" shadow="receive: true" color =  "#4d4d00"></a-circle>
+      <a-circle id="ground2" position="-18 0 -10" radius="8" rotation="-90 0 0" shadow="receive: true" color =  "#4d4d00"></a-circle>
 
       <a-entity
         position="18 0 -15"
@@ -289,10 +289,10 @@
         event-set__mousedown="scale: 5 5 5"
         event-set__mouseup="scale: 3 3 3"
         rotation="0 0 0"
-        shadow="cast: true" 
+        shadow="cast: true"
         gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
       ></a-entity>
-      <a-circle id="ground3" position="-18 0 -15" radius="10" rotation="-90 0 0" shadow="receive: true" color =  "#4d4d00"></a-circle>
+      <a-circle id="ground3" position="18 0 -15" radius="8" rotation="-90 0 0" shadow="receive: true" color =  "#4d4d00"></a-circle>
 
       <a-entity
         position="18 0 -5"
@@ -303,28 +303,28 @@
         shadow="cast: true"
         gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
       ></a-entity>
-      <a-circle id="ground4" position="-18 0 -5" radius="10" rotation="-90 0 0" shadow="receive: true" color =  "#4d4d00"></a-circle>
+      <a-circle id="ground4" position="18 0 -5" radius="8" rotation="-90 0 0" shadow="receive: true" color =  "#4d4d00"></a-circle>
 
       <a-entity
         gltf-model="#shed-gltf"
         position="2 -4.2 -10"
         rotation="0 -110 0"
         scale="3.4 3.4 3.4"
-      ></a-entity>   
+      ></a-entity>
       <a-entity
         gltf-model="#cattle-gltf"
         position="10 1 -12.5"
         rotation="0 -110 0"
         scale=".01 .01 .01"
       ></a-entity>
-      
+
       <a-entity
         gltf-model="#cattle-gltf"
         position="-6 1 -8"
         rotation="0 -190 0"
         scale=".01 .01 .01"
       ></a-entity>
-      
+
       <a-entity
         gltf-model="#cattle-gltf"
         position="12 1 -11.5"
@@ -364,4 +364,3 @@
     </a-scene>
   </body>
 </html>
-
