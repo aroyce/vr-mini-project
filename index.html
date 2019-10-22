@@ -32,6 +32,7 @@
         <audio id="pick_sound" src="sounds/pick.mp3" preload="auto" crossorigin="anonymous"></audio>
         <audio id="pitchfork_sound" src="sounds/pitchfork.mp3" preload="auto" crossorigin="anonymous"></audio>
         <audio id="water_sound" src="sounds/watering.mp3" preload="auto" crossorigin="anonymous"></audio>
+        <audio id="moo" src="sounds/moo.mp3" preload="auto" crossorigin="anonymous"></audio>
         <!-- Corbet's images-->
         <img id="soil_img" src="img/soil.jpg" alt="water label" />
         <img id="seeds_img" src="img/seeds.jpg" alt="seeds label" />
@@ -59,7 +60,7 @@
 
       <!--Start Background Music-->
       <a-entity sound="autoplay: true; src: #background_music"></a-entity>
-
+      <a-entity sound="autoplay: true; src: #moo"></a-entity>
       <!--from A-Frame: https://aframe.io/docs/0.9.0/guides/building-a-basic-scene.html#tweaking-lighting -->
       <a-light type="ambient" color="#eba160"></a-light>
       <a-light type="point" intensity=".15" position="2 4 4"></a-light>
@@ -169,7 +170,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
-        sound="src: #pick_sound; on: click; autoplay: false;"
+        sound="src: #pick_sound; on: click; autoplay: false; volume: 1"
       ></a-entity>
       <a-entity
         position="2.75 3 -.75"
@@ -178,7 +179,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
-        sound="src: #pick_sound; on: click; autoplay: false;"
+        sound="src: #pick_sound; on: click; autoplay: false; volume: 1"
       ></a-entity>
       <a-entity
         position="3.15 2 -.25"
@@ -187,7 +188,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
-        sound="src: #pick_sound; on: click; autoplay: false;"
+        sound="src: #pick_sound; on: click; autoplay: false; volume: 1"
       ></a-entity>
       <a-entity
         position="2.25 1.75 -1"
@@ -196,7 +197,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
-        sound="src: #pick_sound; on: click; autoplay: false;"
+        sound="src: #pick_sound; on: click; autoplay: false; volume: 1"
       ></a-entity>
       <a-entity
         position="3.75 3 -1"
@@ -205,7 +206,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
-        sound="src: #pick_sound; on: click; autoplay: false;"
+        sound="src: #pick_sound; on: click; autoplay: false; volume: 1"
       ></a-entity>
 
       <!-- Fiddlehead: https://poly.google.com/view/1RBdp6-9pZi-->
@@ -229,7 +230,7 @@
         scale=".4 .4 .4"
         event-set__mousedown="rotation: 70 140 90; position: 2 .9 1"
         event-set__mouseup="scale: .45 .45 .45; position: -.2 .7 2; rotation: 90 180 50"
-        sound="src: #pitchfork_sound; on: click; autoplay: false;"
+        sound="src: #pitchfork_sound; on: click; autoplay: false; volume: 1"
         rotation="0 170 0"
       ></a-entity>
       
@@ -240,7 +241,7 @@
         event-set__mousedown="rotation: 100 90 -30; position: 3 2 1"
         event-set__mouseup="scale: 0.031 0.031 0.031; position: .7 .3 .5; rotation: 0 -40 0"
         rotation="0 40 0"
-        sound="src: #water_sound; on: click; autoplay: false;"
+        sound="src: #water_sound; on: click; autoplay: false; volume: 1"
       ></a-entity>
 
       <!-- Apple tree by Jon Benton: https://poly.google.com/view/cpg6wP8JCyQ-->
