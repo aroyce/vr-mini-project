@@ -1,6 +1,6 @@
 Welcome to VR GARDEN !
 
-Please visit : https://aroyce.github.io/vr-mini-project/index.html to interact with our prototype. Please user a chrome browser for mobile and desktop.
+Please visit : https://aroyce.github.io/vr-mini-project/index.html to interact with our prototype. Please use a chrome browser for mobile and desktop.
 
 INTERACTIONS YOU CAN MAKE :
 
