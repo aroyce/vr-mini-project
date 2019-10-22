@@ -8,11 +8,10 @@ HARVEST:
   You're able to harvest your tomatoes by clicking on them with your pointer.
 
 WATER:
-  You're able to pick up the watering can by gazing, and clicking on it to pour!
-  However, please hold the watering can for 3 seconds if you want the watering can to come back to original placement.
+  First gaze at the watering jug. The pot will move to the middle of view. Then click on the jug to pour water on the plants. However, please hold the watering can for 3 seconds if you want the watering can to come back to original placement.
 
 DIG:
-  Loosen up some dirt with your pitchfork to prepare your beds. You can dig by gazing at the pitchfork and clicking to simulate digging
+  First gaze at the pitchfork. The pitchfork will move to the middle of view.  Loosen up some dirt with your pitchfork to prepare your beds. You can dig by gazing at the pitchfork and clicking to simulate digging
 
 
 
