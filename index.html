@@ -252,8 +252,18 @@
       ></a-entity>
 
       <a-entity
-      
-      ></a-entity>
+            gltf-model="#jug-gltf"
+            position=".7 .3 .5"
+            scale="0.031 0.031 0.031"
+            event-set__mouseup="scale: 0.031 0.031 0.031; position: .7 .3 .5; rotation: 0 -40 0"
+            rotation="0 -40 0"
+            sound="src: #water_sound; on: click; autoplay: false; volume: 1"
+            animation__position="property: position; dir: forward: dur: 100; easing: easeInSine; loop: false; from: .7 .3 .5; to: 3 2 1;
+                                 startEvents:mousedown"
+            animation__rotate="property: rotation; dir: forward; dur: 1000;
+                                     easing: easeInSine; loop: false; from: 0 -40 0; to: -90 -40 0;
+                                     startEvents:mousedown"
+        ></a-entity>
 
       <!-- Apple tree by Jon Benton: https://poly.google.com/view/cpg6wP8JCyQ-->
       <a-entity
