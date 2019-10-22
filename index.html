@@ -28,7 +28,10 @@
 
       <a-assets>
         <!--Background music from https://freesound.org/people/blouhond/sounds/165269/-->
-        <audio id="background_music" src="sounds/gardenambience.mp3" preload="auto"></audio>
+        <audio id="background_music" src="sounds/gardenambience.mp3" preload="auto" crossorigin="anonymous"></audio>
+        <audio id="pick_sound" src="sounds/pick.mp3" preload="auto" crossorigin="anonymous"></audio>
+        <audio id="pitchfork_sound" src="sounds/pitchfork.mp3" preload="auto" crossorigin="anonymous"></audio>
+        <audio id="water_sound" src="sounds/watering.mp3" preload="auto" crossorigin="anonymous"></audio>
         <!-- Corbet's images-->
         <img id="soil_img" src="img/soil.jpg" alt="water label" />
         <img id="seeds_img" src="img/seeds.jpg" alt="seeds label" />
@@ -94,18 +97,18 @@
       <a-sky color="#ECECEC"></a-sky>
 
       <!-- Plant Seeds Asset -->
-      <a-box 
+      <!-- <a-box 
         color="white" 
         height="1" 
         width=".6" 
         depth=".05"
         position="0 0.5 1.5" 
         id="seeds" 
-        src="#seeds_img">
-        <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
+        src="#seeds_img"> -->
+        <!-- <a-animation attribute="rotation" begin="click" to="0 360 0"></a-animation>
         <a-event name="mouseenter" scale="2.3 2.3 2.3"></a-event>
-        <a-event name="mouseleave" scale="1 1 1"></a-event>
-      </a-box>
+        <a-event name="mouseleave" scale="1 1 1"></a-event> -->
+      <!-- </a-box> -->
 
       <!-- Soil Bag Asset -->
       <!-- <a-box color="white" height="1.2" width=".8" depth=".8"
@@ -166,6 +169,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
+        sound="src: #pick_sound; on: click; autoplay: false;"
       ></a-entity>
       <a-entity
         position="2.75 3 -.75"
@@ -174,6 +178,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
+        sound="src: #pick_sound; on: click; autoplay: false;"
       ></a-entity>
       <a-entity
         position="3.15 2 -.25"
@@ -182,6 +187,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
+        sound="src: #pick_sound; on: click; autoplay: false;"
       ></a-entity>
       <a-entity
         position="2.25 1.75 -1"
@@ -190,6 +196,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
+        sound="src: #pick_sound; on: click; autoplay: false;"
       ></a-entity>
       <a-entity
         position="3.75 3 -1"
@@ -198,6 +205,7 @@
         event-set__mouseup="scale: 3 3 3"
         rotation="-90 0 0"
         gpoly="polyid: dmzbb8UisNv; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
+        sound="src: #pick_sound; on: click; autoplay: false;"
       ></a-entity>
 
       <!-- Fiddlehead: https://poly.google.com/view/1RBdp6-9pZi-->
@@ -221,6 +229,7 @@
         scale=".4 .4 .4"
         event-set__mousedown="rotation: 70 140 90; position: 2 .9 1"
         event-set__mouseup="scale: .45 .45 .45; position: -.2 .7 2; rotation: 90 180 50"
+        sound="src: #pitchfork_sound; on: click; autoplay: false;"
         rotation="0 170 0"
       ></a-entity>
       
@@ -231,38 +240,31 @@
         event-set__mousedown="rotation: 100 90 -30; position: 3 2 1"
         event-set__mouseup="scale: 0.031 0.031 0.031; position: .7 .3 .5; rotation: 0 -40 0"
         rotation="0 40 0"
+        sound="src: #water_sound; on: click; autoplay: false;"
       ></a-entity>
 
       <!-- Apple tree by Jon Benton: https://poly.google.com/view/cpg6wP8JCyQ-->
       <a-entity
         position="-18 0 -20"
         scale="1 1 1"
-        event-set__mousedown="scale: 5 5 5"
-        event-set__mouseup="scale: 3 3 3"
         rotation="0 0 0"
         gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
       ></a-entity>
       <a-entity
         position="-18 0 -10"
         scale="1 1 1"
-        event-set__mousedown="scale: 5 5 5"
-        event-set__mouseup="scale: 3 3 3"
         rotation="0 0 0"
         gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
       ></a-entity>
       <a-entity
         position="18 0 -15"
         scale="1 1 1"
-        event-set__mousedown="scale: 5 5 5"
-        event-set__mouseup="scale: 3 3 3"
         rotation="0 0 0"
         gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
       ></a-entity>
       <a-entity
         position="18 0 -5"
         scale="1 1 1"
-        event-set__mousedown="scale: 5 5 5"
-        event-set__mouseup="scale: 3 3 3"
         rotation="0 0 0"
         gpoly="polyid: cpg6wP8JCyQ; API_KEY: AIzaSyDsovdrekNH2A-NiKfMtMWA8LXebZQ41nk;"
       ></a-entity>
